@@ -1,0 +1,13 @@
+{
+  "Name": "Dutch Farm Buildings",
+  "Author": "ApolloF",
+  "Version": "1.0.0",
+  "Description": "Dutch-style farm buildings, farmhouse, greenhouse and cabins with seasonal textures. Art by eemiestardew (Dutch Farm Buildings), Cazanna (cabins) and Magimatica (greenhouse).",
+  "UniqueID": "ApolloF.DutchFarmBuildings",
+  "MinimumApiVersion": "4.0.0",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "2.9.0"
+  },
+  "UpdateKeys": [ "Nexus:54257" ]
+}

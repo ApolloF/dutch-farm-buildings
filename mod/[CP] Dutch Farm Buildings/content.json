@@ -1,0 +1,1496 @@
+{
+  "Format": "2.9.0",
+  "ConfigSchema": {
+    "Mode": {
+      "AllowValues": "Replace, Skins",
+      "Default": "Replace"
+    },
+    "Seasonal": {
+      "AllowValues": "true, false",
+      "Default": "true"
+    },
+    "Barns": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Animals"
+    },
+    "Coops": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Animals"
+    },
+    "Stable": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Animals"
+    },
+    "Shed": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "Silo": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "Well": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "JunimoHut": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "Mill": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "SlimeHutch": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "Winery": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "TractorGarage": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "Obelisks": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "ShippingBin": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "GoldClock": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Farm"
+    },
+    "Farmhouse": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Homes"
+    },
+    "Cabins": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Homes"
+    },
+    "Greenhouse": {
+      "AllowValues": "true, false",
+      "Default": "true",
+      "Section": "Homes"
+    }
+  },
+  "DynamicTokens": [
+    {
+      "Name": "BuildingSeason",
+      "Value": "{{Season}}"
+    },
+    {
+      "Name": "BuildingSeason",
+      "Value": "spring",
+      "When": {
+        "Seasonal": "false"
+      }
+    },
+    {
+      "Name": "BuildingSeason",
+      "Value": "summer",
+      "When": {
+        "LocationContext": "Island"
+      }
+    }
+  ],
+  "Changes": [
+    {
+      "LogName": "Barn",
+      "Action": "EditImage",
+      "Target": "Buildings/Barn",
+      "FromFile": "assets/{{BuildingSeason}}/Barn.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Big Barn",
+      "Action": "EditImage",
+      "Target": "Buildings/Big Barn",
+      "FromFile": "assets/{{BuildingSeason}}/Big Barn.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Deluxe Barn",
+      "Action": "EditImage",
+      "Target": "Buildings/Deluxe Barn",
+      "FromFile": "assets/{{BuildingSeason}}/Deluxe Barn.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Coop",
+      "Action": "EditImage",
+      "Target": "Buildings/Coop",
+      "FromFile": "assets/{{BuildingSeason}}/Coop.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Big Coop",
+      "Action": "EditImage",
+      "Target": "Buildings/Big Coop",
+      "FromFile": "assets/{{BuildingSeason}}/Big Coop.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Deluxe Coop",
+      "Action": "EditImage",
+      "Target": "Buildings/Deluxe Coop",
+      "FromFile": "assets/{{BuildingSeason}}/Deluxe Coop.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Shed",
+      "Action": "EditImage",
+      "Target": "Buildings/Shed",
+      "FromFile": "assets/{{BuildingSeason}}/Shed.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Shed": "true"
+      }
+    },
+    {
+      "LogName": "Big Shed",
+      "Action": "EditImage",
+      "Target": "Buildings/Big Shed",
+      "FromFile": "assets/{{BuildingSeason}}/Big Shed.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Shed": "true"
+      }
+    },
+    {
+      "LogName": "Silo",
+      "Action": "EditImage",
+      "Target": "Buildings/Silo",
+      "FromFile": "assets/{{BuildingSeason}}/Silo.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Silo": "true"
+      }
+    },
+    {
+      "LogName": "Stable",
+      "Action": "EditImage",
+      "Target": "Buildings/Stable",
+      "FromFile": "assets/{{BuildingSeason}}/Stable.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Stable": "true"
+      }
+    },
+    {
+      "LogName": "Well",
+      "Action": "EditImage",
+      "Target": "Buildings/Well",
+      "FromFile": "assets/{{BuildingSeason}}/Well.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Well": "true"
+      }
+    },
+    {
+      "LogName": "Log Cabin",
+      "Action": "EditImage",
+      "Target": "Buildings/Log Cabin",
+      "FromFile": "assets/{{BuildingSeason}}/Log Cabin.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Plank Cabin",
+      "Action": "EditImage",
+      "Target": "Buildings/Plank Cabin",
+      "FromFile": "assets/{{BuildingSeason}}/Plank Cabin.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Stone Cabin",
+      "Action": "EditImage",
+      "Target": "Buildings/Stone Cabin",
+      "FromFile": "assets/{{BuildingSeason}}/Stone Cabin.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Junimo Hut",
+      "Action": "EditImage",
+      "Target": "Buildings/Junimo Hut",
+      "FromFile": "assets/Junimo Hut.png",
+      "When": {
+        "Mode": "Replace",
+        "JunimoHut": "true"
+      }
+    },
+    {
+      "LogName": "houses",
+      "Action": "EditImage",
+      "Target": "Buildings/houses",
+      "FromFile": "assets/{{BuildingSeason}}/houses.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 160,
+        "Height": 432
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 160,
+        "Height": 432
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Farmhouse": "true"
+      }
+    },
+    {
+      "LogName": "Greenhouse",
+      "Action": "EditImage",
+      "Target": "Buildings/Greenhouse",
+      "FromFile": "assets/{{BuildingSeason}}/Greenhouse.png",
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 112,
+        "Height": 320
+      },
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Greenhouse": "true"
+      }
+    },
+    {
+      "LogName": "Tractor Garage",
+      "Action": "EditImage",
+      "Target": "Mods/Pathoschild.TractorMod/Garage",
+      "FromFile": "assets/{{BuildingSeason}}/Tractor Garage.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "TractorGarage": "true",
+        "HasMod": "Pathoschild.TractorMod"
+      }
+    },
+    {
+      "LogName": "Mill",
+      "Action": "EditImage",
+      "Target": "Buildings/Mill",
+      "FromFile": "assets/{{BuildingSeason}}/Mill.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "Mill": "true"
+      }
+    },
+    {
+      "LogName": "Slime Hutch",
+      "Action": "EditImage",
+      "Target": "Buildings/Slime Hutch",
+      "FromFile": "assets/{{BuildingSeason}}/Slime Hutch.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Replace",
+        "SlimeHutch": "true"
+      }
+    },
+    {
+      "LogName": "Earth Obelisk",
+      "Action": "EditImage",
+      "Target": "Buildings/Earth Obelisk",
+      "FromFile": "assets/Earth Obelisk.png",
+      "When": {
+        "Mode": "Replace",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Water Obelisk",
+      "Action": "EditImage",
+      "Target": "Buildings/Water Obelisk",
+      "FromFile": "assets/Water Obelisk.png",
+      "When": {
+        "Mode": "Replace",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Desert Obelisk",
+      "Action": "EditImage",
+      "Target": "Buildings/Desert Obelisk",
+      "FromFile": "assets/Desert Obelisk.png",
+      "When": {
+        "Mode": "Replace",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Island Obelisk",
+      "Action": "EditImage",
+      "Target": "Buildings/Island Obelisk",
+      "FromFile": "assets/Island Obelisk.png",
+      "When": {
+        "Mode": "Replace",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Gold Clock",
+      "Action": "EditImage",
+      "Target": "Buildings/Gold Clock",
+      "FromFile": "assets/Gold Clock.png",
+      "When": {
+        "Mode": "Replace",
+        "GoldClock": "true"
+      }
+    },
+    {
+      "LogName": "Shipping Bin",
+      "Action": "EditImage",
+      "Target": "Buildings/Shipping Bin",
+      "FromFile": "assets/Shipping Bin.png",
+      "When": {
+        "Mode": "Replace",
+        "ShippingBin": "true"
+      }
+    },
+    {
+      "LogName": "Shipping Bin lid",
+      "Action": "EditImage",
+      "Target": "LooseSprites/Cursors",
+      "FromFile": "assets/ShippingBinLid.png",
+      "ToArea": {
+        "X": 134,
+        "Y": 226,
+        "Width": 390,
+        "Height": 25
+      },
+      "When": {
+        "Mode": "Replace",
+        "ShippingBin": "true"
+      }
+    },
+    {
+      "LogName": "Shipping Bin ship animation",
+      "Action": "EditImage",
+      "Target": "LooseSprites/Cursors",
+      "FromFile": "assets/ShippingBinShip.png",
+      "ToArea": {
+        "X": 524,
+        "Y": 218,
+        "Width": 102,
+        "Height": 22
+      },
+      "When": {
+        "Mode": "Replace",
+        "ShippingBin": "true"
+      }
+    },
+    {
+      "LogName": "Mill sails texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/MillSails",
+      "FromFile": "assets/MillSails.png",
+      "When": {
+        "Mode": "Replace",
+        "Mill": "true"
+      }
+    },
+    {
+      "LogName": "Mill big sails",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Mill",
+        "DrawLayers",
+        "Default_WindSails"
+      ],
+      "Entries": {
+        "Texture": "Mods/{{ModId}}/MillSails",
+        "SourceRect": {
+          "X": 0,
+          "Y": 0,
+          "Width": 80,
+          "Height": 80
+        },
+        "DrawPosition": "-16, -23"
+      },
+      "When": {
+        "Mode": "Replace",
+        "Mill": "true"
+      }
+    },
+    {
+      "LogName": "Chimney smoke: Stone Cabin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Cabin",
+        "Metadata"
+      ],
+      "Entries": {
+        "ChimneyPosition": "58 6"
+      },
+      "When": {
+        "Mode": "Replace",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Chimney smoke: Log Cabin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Cabin",
+        "Skins",
+        "Log Cabin",
+        "Metadata"
+      ],
+      "Entries": {
+        "ChimneyPosition": "66 18"
+      },
+      "When": {
+        "Mode": "Replace",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Chimney smoke: Plank Cabin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Cabin",
+        "Skins",
+        "Plank Cabin",
+        "Metadata"
+      ],
+      "Entries": {
+        "ChimneyPosition": "67 19"
+      },
+      "When": {
+        "Mode": "Replace",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Chimney smoke: Farmhouse",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Farmhouse",
+        "Metadata"
+      ],
+      "Entries": {
+        "ChimneyPosition": "146 15",
+        "ChimneyPosition3": "146 18"
+      },
+      "When": {
+        "Mode": "Replace",
+        "Farmhouse": "true"
+      }
+    },
+    {
+      "LogName": "Paint options removed: Farmhouse",
+      "Action": "EditData",
+      "Target": "Data/PaintData",
+      "Entries": {
+        "House": null
+      },
+      "When": {
+        "Mode": "Replace",
+        "Farmhouse": "true"
+      }
+    },
+    {
+      "LogName": "Paint options removed: Cabins",
+      "Action": "EditData",
+      "Target": "Data/PaintData",
+      "Entries": {
+        "Log Cabin": null,
+        "Plank Cabin": null,
+        "Stone Cabin": null
+      },
+      "When": {
+        "Mode": "Replace",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Paint options removed: Stable",
+      "Action": "EditData",
+      "Target": "Data/PaintData",
+      "Entries": {
+        "Stable": null
+      },
+      "When": {
+        "Mode": "Replace",
+        "Stable": "true"
+      }
+    },
+    {
+      "LogName": "Paint options removed: Deluxe Coop",
+      "Action": "EditData",
+      "Target": "Data/PaintData",
+      "Entries": {
+        "Deluxe Coop": null
+      },
+      "When": {
+        "Mode": "Replace",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Paint options removed: Deluxe Barn",
+      "Action": "EditData",
+      "Target": "Data/PaintData",
+      "Entries": {
+        "Deluxe Barn": null
+      },
+      "When": {
+        "Mode": "Replace",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Paint options removed: Big Shed",
+      "Action": "EditData",
+      "Target": "Data/PaintData",
+      "Entries": {
+        "Big Shed": null
+      },
+      "When": {
+        "Mode": "Replace",
+        "Shed": "true"
+      }
+    },
+    {
+      "LogName": "Paint mask blanked: Farmhouse",
+      "Action": "EditImage",
+      "Target": "Buildings/houses_PaintMask",
+      "FromFile": "assets/blank.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 160,
+        "Height": 432
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 160,
+        "Height": 432
+      },
+      "When": {
+        "Mode": "Replace",
+        "Farmhouse": "true"
+      }
+    },
+    {
+      "LogName": "Paint mask blanked: Cabins",
+      "Action": "EditImage",
+      "Target": "Buildings/Log Cabin_PaintMask,Buildings/Plank Cabin_PaintMask,Buildings/Stone Cabin_PaintMask",
+      "FromFile": "assets/blank.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 240,
+        "Height": 112
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 240,
+        "Height": 112
+      },
+      "When": {
+        "Mode": "Replace",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Paint mask blanked: Stable",
+      "Action": "EditImage",
+      "Target": "Buildings/Stable_PaintMask",
+      "FromFile": "assets/blank.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 96
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 64,
+        "Height": 96
+      },
+      "When": {
+        "Mode": "Replace",
+        "Stable": "true"
+      }
+    },
+    {
+      "LogName": "Paint mask blanked: Deluxe Coop",
+      "Action": "EditImage",
+      "Target": "Buildings/Deluxe Coop_PaintMask",
+      "FromFile": "assets/blank.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 96,
+        "Height": 128
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 96,
+        "Height": 128
+      },
+      "When": {
+        "Mode": "Replace",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Paint mask blanked: Deluxe Barn",
+      "Action": "EditImage",
+      "Target": "Buildings/Deluxe Barn_PaintMask",
+      "FromFile": "assets/blank.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 112,
+        "Height": 128
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 112,
+        "Height": 128
+      },
+      "When": {
+        "Mode": "Replace",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Paint mask blanked: Big Shed",
+      "Action": "EditImage",
+      "Target": "Buildings/Big Shed_PaintMask",
+      "FromFile": "assets/blank.png",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 112,
+        "Height": 128
+      },
+      "ToArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 112,
+        "Height": 128
+      },
+      "When": {
+        "Mode": "Replace",
+        "Shed": "true"
+      }
+    },
+    {
+      "LogName": "Barn skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Barn",
+      "FromFile": "assets/{{BuildingSeason}}/Barn.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Big Barn skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Big Barn",
+      "FromFile": "assets/{{BuildingSeason}}/Big Barn.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Deluxe Barn skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Deluxe Barn",
+      "FromFile": "assets/{{BuildingSeason}}/Deluxe Barn.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Coop skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Coop",
+      "FromFile": "assets/{{BuildingSeason}}/Coop.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Big Coop skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Big Coop",
+      "FromFile": "assets/{{BuildingSeason}}/Big Coop.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Deluxe Coop skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Deluxe Coop",
+      "FromFile": "assets/{{BuildingSeason}}/Deluxe Coop.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Shed skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Shed",
+      "FromFile": "assets/{{BuildingSeason}}/Shed.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Shed": "true"
+      }
+    },
+    {
+      "LogName": "Big Shed skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Big Shed",
+      "FromFile": "assets/{{BuildingSeason}}/Big Shed.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Shed": "true"
+      }
+    },
+    {
+      "LogName": "Silo skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Silo",
+      "FromFile": "assets/{{BuildingSeason}}/Silo.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Silo": "true"
+      }
+    },
+    {
+      "LogName": "Stable skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Stable",
+      "FromFile": "assets/{{BuildingSeason}}/Stable.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Stable": "true"
+      }
+    },
+    {
+      "LogName": "Well skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Well",
+      "FromFile": "assets/{{BuildingSeason}}/Well.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Well": "true"
+      }
+    },
+    {
+      "LogName": "Log Cabin skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Log Cabin",
+      "FromFile": "assets/{{BuildingSeason}}/Log Cabin.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Plank Cabin skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Plank Cabin",
+      "FromFile": "assets/{{BuildingSeason}}/Plank Cabin.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Stone Cabin skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Stone Cabin",
+      "FromFile": "assets/{{BuildingSeason}}/Stone Cabin.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Junimo Hut skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Junimo Hut",
+      "FromFile": "assets/Junimo Hut.png",
+      "When": {
+        "Mode": "Skins",
+        "JunimoHut": "true"
+      }
+    },
+    {
+      "LogName": "Mill skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Mill",
+      "FromFile": "assets/{{BuildingSeason}}/Mill.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "Mill": "true"
+      }
+    },
+    {
+      "LogName": "Slime Hutch skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Slime Hutch",
+      "FromFile": "assets/{{BuildingSeason}}/Slime Hutch.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mode": "Skins",
+        "SlimeHutch": "true"
+      }
+    },
+    {
+      "LogName": "Winery skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Winery",
+      "FromFile": "assets/{{BuildingSeason}}/Winery.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Winery": "true"
+      }
+    },
+    {
+      "LogName": "Earth Obelisk skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Earth Obelisk",
+      "FromFile": "assets/Earth Obelisk.png",
+      "When": {
+        "Mode": "Skins",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Water Obelisk skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Water Obelisk",
+      "FromFile": "assets/Water Obelisk.png",
+      "When": {
+        "Mode": "Skins",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Desert Obelisk skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Desert Obelisk",
+      "FromFile": "assets/Desert Obelisk.png",
+      "When": {
+        "Mode": "Skins",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Gold Clock skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Gold Clock",
+      "FromFile": "assets/Gold Clock.png",
+      "When": {
+        "Mode": "Skins",
+        "GoldClock": "true"
+      }
+    },
+    {
+      "LogName": "Island Obelisk skin texture",
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Island Obelisk",
+      "FromFile": "assets/Island Obelisk.png",
+      "When": {
+        "Mode": "Skins",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Barn skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Barn",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Barn": {
+          "Id": "{{ModId}}_Barn",
+          "Name": "{{i18n:building.Barn.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Barn_Description]",
+          "Texture": "Mods/{{ModId}}/Barn"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Big Barn skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Big Barn",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Barn": {
+          "Id": "{{ModId}}_Barn",
+          "Name": "{{i18n:building.BigBarn.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:BigBarn_Description]",
+          "Texture": "Mods/{{ModId}}/Big Barn"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Deluxe Barn skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Deluxe Barn",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Barn": {
+          "Id": "{{ModId}}_Barn",
+          "Name": "{{i18n:building.DeluxeBarn.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:DeluxeBarn_Description]",
+          "Texture": "Mods/{{ModId}}/Deluxe Barn"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Barns": "true"
+      }
+    },
+    {
+      "LogName": "Coop skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Coop",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Coop": {
+          "Id": "{{ModId}}_Coop",
+          "Name": "{{i18n:building.Coop.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Coop_Description]",
+          "Texture": "Mods/{{ModId}}/Coop"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Big Coop skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Big Coop",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Coop": {
+          "Id": "{{ModId}}_Coop",
+          "Name": "{{i18n:building.BigCoop.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:BigCoop_Description]",
+          "Texture": "Mods/{{ModId}}/Big Coop"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Deluxe Coop skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Deluxe Coop",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Coop": {
+          "Id": "{{ModId}}_Coop",
+          "Name": "{{i18n:building.DeluxeCoop.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:DeluxeCoop_Description]",
+          "Texture": "Mods/{{ModId}}/Deluxe Coop"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Coops": "true"
+      }
+    },
+    {
+      "LogName": "Shed skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Shed",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Shed": {
+          "Id": "{{ModId}}_Shed",
+          "Name": "{{i18n:building.Shed.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Shed_Description]",
+          "Texture": "Mods/{{ModId}}/Shed"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Shed": "true"
+      }
+    },
+    {
+      "LogName": "Big Shed skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Big Shed",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Shed": {
+          "Id": "{{ModId}}_Shed",
+          "Name": "{{i18n:building.BigShed.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:BigShed_Description]",
+          "Texture": "Mods/{{ModId}}/Big Shed"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Shed": "true"
+      }
+    },
+    {
+      "LogName": "Silo skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Silo",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Silo": {
+          "Id": "{{ModId}}_Silo",
+          "Name": "{{i18n:building.Silo.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Silo_Description]",
+          "Texture": "Mods/{{ModId}}/Silo"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Silo": "true"
+      }
+    },
+    {
+      "LogName": "Stable skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Stable",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Stable": {
+          "Id": "{{ModId}}_Stable",
+          "Name": "{{i18n:building.Stable.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Stable_Description]",
+          "Texture": "Mods/{{ModId}}/Stable"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Stable": "true"
+      }
+    },
+    {
+      "LogName": "Well skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Well",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Well": {
+          "Id": "{{ModId}}_Well",
+          "Name": "{{i18n:building.Well.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Well_Description]",
+          "Texture": "Mods/{{ModId}}/Well"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Well": "true"
+      }
+    },
+    {
+      "LogName": "Log Cabin skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Cabin",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_LogCabin": {
+          "Id": "{{ModId}}_LogCabin",
+          "Name": "{{i18n:building.Cabin.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Cabin_Description]",
+          "Texture": "Mods/{{ModId}}/Log Cabin",
+          "Metadata": {
+            "ChimneyPosition": "66 18"
+          }
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Plank Cabin skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Cabin",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_PlankCabin": {
+          "Id": "{{ModId}}_PlankCabin",
+          "Name": "{{i18n:building.Cabin.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Cabin_Description]",
+          "Texture": "Mods/{{ModId}}/Plank Cabin",
+          "Metadata": {
+            "ChimneyPosition": "67 19"
+          }
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Stone Cabin skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Cabin",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_StoneCabin": {
+          "Id": "{{ModId}}_StoneCabin",
+          "Name": "{{i18n:building.Cabin.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Cabin_Description]",
+          "Texture": "Mods/{{ModId}}/Stone Cabin",
+          "Metadata": {
+            "ChimneyPosition": "58 6"
+          }
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Cabins": "true"
+      }
+    },
+    {
+      "LogName": "Junimo Hut skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Junimo Hut",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_JunimoHut": {
+          "Id": "{{ModId}}_JunimoHut",
+          "Name": "{{i18n:building.JunimoHut.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:JunimoHut_Description]",
+          "Texture": "Mods/{{ModId}}/Junimo Hut"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "JunimoHut": "true"
+      }
+    },
+    {
+      "LogName": "Mill skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Mill",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Mill": {
+          "Id": "{{ModId}}_Mill",
+          "Name": "{{i18n:building.Mill.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:Mill_Description]",
+          "Texture": "Mods/{{ModId}}/Mill"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Mill": "true"
+      }
+    },
+    {
+      "LogName": "Slime Hutch skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Slime Hutch",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_SlimeHutch": {
+          "Id": "{{ModId}}_SlimeHutch",
+          "Name": "{{i18n:building.SlimeHutch.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:SlimeHutch_Description]",
+          "Texture": "Mods/{{ModId}}/Slime Hutch"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "SlimeHutch": "true"
+      }
+    },
+    {
+      "LogName": "Winery skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Slime Hutch",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_Winery": {
+          "Id": "{{ModId}}_Winery",
+          "Name": "{{i18n:building.Winery.name}} ({{i18n:skin.suffix}})",
+          "Description": "{{i18n:building.Winery.description}}",
+          "Texture": "Mods/{{ModId}}/Winery"
+        }
+      },
+      "When": {
+        "Winery": "true"
+      }
+    },
+    {
+      "LogName": "Earth Obelisk skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Earth Obelisk",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_EarthObelisk": {
+          "Id": "{{ModId}}_EarthObelisk",
+          "Name": "{{i18n:building.EarthObelisk.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:EarthObelisk_Description]",
+          "Texture": "Mods/{{ModId}}/Earth Obelisk"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Water Obelisk skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Water Obelisk",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_WaterObelisk": {
+          "Id": "{{ModId}}_WaterObelisk",
+          "Name": "{{i18n:building.WaterObelisk.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:WaterObelisk_Description]",
+          "Texture": "Mods/{{ModId}}/Water Obelisk"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Desert Obelisk skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Desert Obelisk",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_DesertObelisk": {
+          "Id": "{{ModId}}_DesertObelisk",
+          "Name": "{{i18n:building.DesertObelisk.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:DesertObelisk_Description]",
+          "Texture": "Mods/{{ModId}}/Desert Obelisk"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Island Obelisk skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Island Obelisk",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_IslandObelisk": {
+          "Id": "{{ModId}}_IslandObelisk",
+          "Name": "{{i18n:building.IslandObelisk.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:IslandObelisk_Description]",
+          "Texture": "Mods/{{ModId}}/Island Obelisk"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "Obelisks": "true"
+      }
+    },
+    {
+      "LogName": "Gold Clock skin",
+      "Action": "EditData",
+      "Target": "Data/Buildings",
+      "TargetField": [
+        "Gold Clock",
+        "Skins"
+      ],
+      "Entries": {
+        "{{ModId}}_GoldClock": {
+          "Id": "{{ModId}}_GoldClock",
+          "Name": "{{i18n:building.GoldClock.name}} ({{i18n:skin.suffix}})",
+          "Description": "[LocalizedText Strings\\Buildings:GoldClock_Description]",
+          "Texture": "Mods/{{ModId}}/Gold Clock"
+        }
+      },
+      "When": {
+        "Mode": "Skins",
+        "GoldClock": "true"
+      }
+    }
+  ]
+}
